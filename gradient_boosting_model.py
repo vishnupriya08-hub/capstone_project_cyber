@@ -14,8 +14,8 @@ def load_and_preprocess_data(train_file, test_file):
     Load and preprocess training and test datasets.
     """
     # Load datasets
-    train_df = pd.read_csv(train_file, encoding='unicode_escape').iloc[:500000]
-    test_df = pd.read_csv(test_file, encoding='unicode_escape').iloc[:500000]
+    train_df = pd.read_csv(train_file, encoding='unicode_escape')
+    test_df = pd.read_csv(test_file, encoding='unicode_escape')
     # Drop unwanted columns
     columns_to_drop = [
         'Id', 'IncidentId', 'AlertId', 'Sha256', 'Url', 'ActionGrouped', 'ActionGranular', 'EmailClusterId', 'RegistryKey',
